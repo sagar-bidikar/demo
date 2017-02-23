@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function validateform()
+{
+var username=document.getElementById("username").value;
+var password=document.getElementById("password").value;
+if (username.length==0)
+{
+alert("enter userName");
+document.getElementById("username_err").innerHTML="Enter UserName";
+userName.focus();
+			return false;}
+else{
+			document.getElementById("username_err").innerHTML="";
+		}
+if(password.length==0)
+{
+alert("enter password")
+document.getElementById("pass_err").innerHTML="Enter password";
+
+userName.focus();
+			return false;
+}
+else{
+			document.getElementById("pass_err").innerHTML="";
+		}
+
+
+
+}
+
+
+
+
+
+</script>
+</head>
+<body>
+	<form action="LoginServletController" method="Get">
+
+		<table>
+			<tr>
+				<td><input type="text" id="username"
+					placeholder="enter username" name="name"></td>
+				<td><span id="username_err"></span></td>
+			</tr>
+			<tr>
+				<td><input type="password" id="password"
+					placeholder="enter password" name="pass"></td>
+				<td><span id="pass_err"></span></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="login"
+					onclick="return validateform();"> <input type="reset"
+					value="reset"></td>
+			</tr>
+			<h4></h4>
+			<tr>
+				<td><a href="Register.html">REGISTER</a></td>
+				<td><a href="GetAllUserServlet">VIEW ALL USER DETAILS</a></td>
+		</table>
+
+	</form>
+
+</body>
+</html>
